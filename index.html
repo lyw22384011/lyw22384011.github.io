@@ -1,69 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuwei LIU | SPring-8 JASRI</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 40px 20px; display: flex; justify-content: center; }
-        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 550px; width: 100%; text-align: center; }
-        
-        /* 头像处理：建议将图片命名为 profile.jpg */
-        .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.15); margin-bottom: 20px; }
-        
-        h1 { font-size: 28px; margin: 10px 0; color: #003366; }
-        .title { font-size: 16px; font-weight: 600; color: #555; margin-bottom: 5px; }
-        .affiliation { font-size: 14px; color: #777; line-height: 1.4; margin-bottom: 25px; }
-        
-        /* 核心版块 */
-        .section { text-align: left; margin-top: 25px; border-top: 1px solid #eee; padding-top: 20px; }
-        .section-title { font-size: 16px; font-weight: bold; color: #003366; text-transform: uppercase; margin-bottom: 12px; display: block; }
-        
-        .link-group { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
-        .btn { display: inline-flex; align-items: center; padding: 10px 16px; background: #fff; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; color: #333; font-size: 14px; transition: 0.3s; }
-        .btn:hover { border-color: #003366; color: #003366; background: #f0f4f8; }
-        
-        .highlight-box { background: #f0f7ff; padding: 15px; border-radius: 8px; text-align: left; margin-bottom: 15px; border-left: 4px solid #0056b3; }
-        .highlight-box a { color: #0056b3; text-decoration: none; font-weight: 600; }
-    </style>
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuwei LIU | SPring-8 / JASRI</title>
 
-<div class="card">
-    <img src="profile.jpg" alt="Yuwei LIU" class="profile-img">
-    
-    <h1>LIU, Yuwei</h1>
+  <style>
+    :root {
+      --main-color: #003366;
+      --sub-color: #0056b3;
+      --green: #10a37f;
+      --orange: #b36b00;
+      --bg-color: #f4f7f6;
+      --text-color: #333;
+      --muted-color: #666;
+      --border-color: #e5e8eb;
+      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 620px;
+      background: #fff;
+      padding: 42px;
+      border-radius: 18px;
+      box-shadow: var(--card-shadow);
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 8px 0 6px;
+      font-size: 30px;
+      color: var(--main-color);
+      letter-spacing: 0.3px;
+    }
+
+    .title {
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .affiliation {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted-color);
+    }
+
+    .section {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .section-title {
+      display: block;
+      margin-bottom: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--main-color);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .highlight-box {
+      margin-bottom: 14px;
+      padding: 16px 18px;
+      border-radius: 10px;
+      border-left: 5px solid var(--sub-color);
+      background: #f0f7ff;
+      line-height: 1.5;
+    }
+
+    .highlight-box strong {
+      font-size: 15px;
+    }
+
+    .highlight-box a {
+      display: inline-block;
+      margin-top: 5px;
+      color: var(--sub-color);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .highlight-box a:hover {
+      text-decoration: underline;
+    }
+
+    .ai-box {
+      border-left-color: var(--green);
+      background: #f0fff4;
+    }
+
+    .ai-box a {
+      color: var(--green);
+    }
+
+    .calc-box {
+      border-left-color: var(--orange);
+      background: #fff8ed;
+    }
+
+    .calc-box a {
+      color: var(--orange);
+    }
+
+    .link-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 16px;
+      border: 1px solid #d8dde3;
+      border-radius: 9px;
+      background: #fff;
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--main-color);
+      color: var(--main-color);
+      background: #f0f4f8;
+      transform: translateY(-1px);
+    }
+
+    .btn:focus {
+      outline: 3px solid rgba(0, 86, 179, 0.25);
+      outline-offset: 2px;
+    }
+
+    .qr-box {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .qr-img {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      margin-top: 6px;
+      padding: 8px;
+      border: 1px solid #d8dde3;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .qr-text {
+      margin: 10px 0 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--muted-color);
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 24px 14px;
+      }
+
+      .card {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .profile-img {
+        width: 125px;
+        height: 125px;
+      }
+
+      .link-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .qr-img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <img src="profile.jpg" alt="Portrait of Yuwei LIU" class="profile-img" />
+
+    <h1>Yuwei LIU</h1>
+
     <p class="title">Tenure-track Researcher</p>
+
     <p class="affiliation">
-        Spectroscopic Imaging Team, Spectroscopy and Imaging Division<br>
-        <strong>Japan Synchrotron Radiation Research Institute (JASRI)</strong>
+      Spectroscopic Imaging Team, Spectroscopy and Imaging Division<br />
+      <strong>Japan Synchrotron Radiation Research Institute (JASRI)</strong><br />
+      SPring-8
     </p>
 
-    <div class="section">
-        <span class="section-title">Current Responsibilities</span>
+    <section class="section" aria-labelledby="responsibilities">
+      <span id="responsibilities" class="section-title">Current Responsibilities</span>
 
-        <div class="highlight-box">
-            🌐 <strong>Beamline BL14B2 (SPring-8)</strong><br>
-            <a href="https://support.spring8.or.jp/BL/bl14b2/index.html" target="_blank">View Beamline Homepage →</a>
-        </div>
+      <div class="highlight-box">
+        🌐 <strong>Beamline BL14B2, SPring-8</strong><br />
+        <a
+          href="https://support.spring8.or.jp/BL/bl14b2/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Beamline Homepage →
+        </a>
+      </div>
 
-        <div class="highlight-box" style="border-left-color: #10a37f; background: #f0fff4;">
-            🤖 <strong>BL14B2 AI Assistance</strong><br>
-            <a href="https://chatgpt.com/g/g-696878848b948191b67fca4089e7a81e-bl14b2-ai-assistance" target="_blank" style="color: #10a37f;">Launch AI Tool →</a>
-        </div>
+      <div class="highlight-box ai-box">
+        🤖 <strong>BL14B2 AI Assistance</strong><br />
+        <a
+          href="https://chatgpt.com/g/g-696878848b948191b67fca4089e7a81e-bl14b2-ai-assistance"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Launch AI Tool →
+        </a>
+      </div>
 
-        <div class="highlight-box" style="border-left-color: #b36b00; background: #fff8ed;">
-            🧮 <strong>AI Calculator for XAFS Sample</strong><br>
-            <a href="https://chatgpt.com/g/g-6a20e7ce75948191bb40df760bff6aa7-xafs-absorption-calculation-assistant" target="_blank" style="color: #b36b00;">Launch XAFS Absorption Calculator →</a>
-        </div>
-    </div>
+      <div class="highlight-box calc-box">
+        🧮 <strong>AI Calculator for XAFS Samples</strong><br />
+        <a
+          href="https://chatgpt.com/g/g-6a20e7ce75948191bb40df760bff6aa7-xafs-absorption-calculation-assistant"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Launch XAFS Absorption Calculator →
+        </a>
+      </div>
+    </section>
 
-    <div class="link-group">
-        <a href="mailto:Liu.Yuwei@spring8.or.jp" class="btn">📧 Email</a>
-        <a href="https://orcid.org/0000-0003-1140-6471" target="_blank" class="btn">🆔 ORCID (CV)</a>
-        <a href="https://scholar.google.com/citations?user=yF8zPXsAAAAJ&hl=en" target="_blank" class="btn">🎓 Google Scholar</a>
-    </div>
-</div>
+    <nav class="link-group" aria-label="External links">
+      <a href="mailto:Liu.Yuwei@spring8.or.jp" class="btn">📧 Email</a>
 
+      <a
+        href="https://orcid.org/0000-0003-1140-6471"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn"
+      >
+        🆔 ORCID
+      </a>
+
+      <a
+        href="https://scholar.google.com/citations?user=yF8zPXsAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn"
+      >
+        🎓 Google Scholar
+      </a>
+    </nav>
+
+    <section class="qr-box" aria-labelledby="share-page">
+      <span id="share-page" class="section-title">Share This Page</span>
+
+      <img
+        src="homepage_qr.png"
+        alt="QR code for Yuwei LIU homepage"
+        class="qr-img"
+      />
+
+      <p class="qr-text">
+        Scan to open this homepage
+      </p>
+    </section>
+  </main>
 </body>
 </html>
