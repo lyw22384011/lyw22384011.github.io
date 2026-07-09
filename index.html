@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yuwei LIU | SPring-8 / JASRI</title>
+
+  <title>Yuwei Liu | XAFS Researcher at SPring-8 / JASRI</title>
+
+  <meta
+    name="description"
+    content="Personal homepage of Yuwei Liu, tenure-track researcher at JASRI/SPring-8. Research interests include XAFS, EXAFS, in-situ XAFS, synchrotron radiation, BL14B2 beamline instrumentation, and multimetallic nanoparticles."
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://lyw22384011.github.io/" />
 
   <style>
     :root {
@@ -36,7 +46,7 @@
 
     .card {
       width: 100%;
-      max-width: 620px;
+      max-width: 700px;
       background: #fff;
       padding: 42px;
       border-radius: 18px;
@@ -84,12 +94,31 @@
 
     .section-title {
       display: block;
-      margin-bottom: 14px;
+      margin: 0 0 14px;
       font-size: 15px;
       font-weight: 700;
       color: var(--main-color);
       text-transform: uppercase;
       letter-spacing: 0.6px;
+    }
+
+    .section p {
+      margin: 0 0 14px;
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--text-color);
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section ul {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--text-color);
     }
 
     .highlight-box {
@@ -227,6 +256,45 @@
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Yuwei Liu",
+      "alternateName": "Yuwei LIU",
+      "jobTitle": "Tenure-track Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Japan Synchrotron Radiation Research Institute (JASRI)"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "JASRI / SPring-8"
+      },
+      "url": "https://lyw22384011.github.io/",
+      "email": "mailto:Liu.Yuwei@spring8.or.jp",
+      "sameAs": [
+        "https://orcid.org/0000-0003-1140-6471",
+        "https://scholar.google.com/citations?user=yF8zPXsAAAAJ&hl=en"
+      ],
+      "knowsAbout": [
+        "XAFS",
+        "EXAFS",
+        "X-ray absorption spectroscopy",
+        "in-situ XAFS",
+        "operando XAFS",
+        "synchrotron radiation",
+        "beamline instrumentation",
+        "BL14B2",
+        "multimetallic nanoparticles",
+        "high-entropy alloy nanoparticles"
+      ]
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -243,8 +311,39 @@
       SPring-8
     </p>
 
+    <section class="section" aria-labelledby="about">
+      <h2 id="about" class="section-title">About</h2>
+
+      <p>
+        Yuwei Liu is a tenure-track researcher at the Japan Synchrotron Radiation
+        Research Institute (JASRI), SPring-8. His work focuses on X-ray absorption
+        spectroscopy (XAFS), EXAFS analysis, in-situ XAFS instrumentation, and
+        synchrotron-based characterization of multimetallic nanoparticles.
+      </p>
+
+      <p>
+        He is currently involved in user support and technical development at
+        Beamline BL14B2, SPring-8, including transmission XAFS, fluorescence XAFS,
+        sample absorption evaluation, beamline automation, and AI-assisted tools
+        for XAFS experiments.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="research-interests">
+      <h2 id="research-interests" class="section-title">Research Interests</h2>
+
+      <ul>
+        <li>X-ray absorption spectroscopy (XAFS) and EXAFS analysis</li>
+        <li>In-situ and operando XAFS measurements</li>
+        <li>Synchrotron radiation instrumentation and beamline automation</li>
+        <li>Fluorescence and transmission XAFS at BL14B2, SPring-8</li>
+        <li>Multimetallic and high-entropy alloy nanoparticles</li>
+        <li>AI-assisted tools for XAFS sample design and absorption evaluation</li>
+      </ul>
+    </section>
+
     <section class="section" aria-labelledby="responsibilities">
-      <span id="responsibilities" class="section-title">Current Responsibilities</span>
+      <h2 id="responsibilities" class="section-title">Current Responsibilities</h2>
 
       <div class="highlight-box">
         🌐 <strong>Beamline BL14B2, SPring-8</strong><br />
@@ -303,7 +402,7 @@
     </nav>
 
     <section class="qr-box" aria-labelledby="share-page">
-      <span id="share-page" class="section-title">Share This Page</span>
+      <h2 id="share-page" class="section-title">Share This Page</h2>
 
       <img
         src="homepage_qr.png"
