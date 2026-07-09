@@ -8,259 +8,26 @@
 
   <meta
     name="description"
-    content="Personal homepage of Yuwei Liu, tenure-track researcher at JASRI/SPring-8. Research interests include XAFS, EXAFS, in-situ XAFS, synchrotron radiation, BL14B2 beamline instrumentation, and multimetallic nanoparticles."
+    content="Personal homepage of Yuwei Liu, tenure-track researcher at JASRI/SPring-8. His work focuses on XAFS experiments at BL14B2, data analysis, synchrotron technique development, and AI-assisted research support."
   />
 
   <meta name="robots" content="index, follow" />
 
   <link rel="canonical" href="https://lyw22384011.github.io/" />
 
-  <style>
-    :root {
-      --main-color: #003366;
-      --sub-color: #0056b3;
-      --green: #10a37f;
-      --orange: #b36b00;
-      --bg-color: #f4f7f6;
-      --text-color: #333;
-      --muted-color: #666;
-      --border-color: #e5e8eb;
-      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
-    }
+  <link rel="alternate" hreflang="en" href="https://lyw22384011.github.io/" />
+  <link rel="alternate" hreflang="ja" href="https://lyw22384011.github.io/ja/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://lyw22384011.github.io/zh/" />
+  <link rel="alternate" hreflang="x-default" href="https://lyw22384011.github.io/" />
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-    }
-
-    .card {
-      width: 100%;
-      max-width: 700px;
-      background: #fff;
-      padding: 42px;
-      border-radius: 18px;
-      box-shadow: var(--card-shadow);
-      text-align: center;
-    }
-
-    .profile-img {
-      width: 145px;
-      height: 145px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #fff;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      margin: 8px 0 6px;
-      font-size: 30px;
-      color: var(--main-color);
-      letter-spacing: 0.3px;
-    }
-
-    .title {
-      margin: 0 0 8px;
-      font-size: 16px;
-      font-weight: 600;
-      color: #444;
-    }
-
-    .affiliation {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--muted-color);
-    }
-
-    .section {
-      margin-top: 30px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border-color);
-      text-align: left;
-    }
-
-    .section-title {
-      display: block;
-      margin: 0 0 14px;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--main-color);
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-    }
-
-    .section p {
-      margin: 0 0 14px;
-      font-size: 14.5px;
-      line-height: 1.75;
-      color: var(--text-color);
-    }
-
-    .section p:last-child {
-      margin-bottom: 0;
-    }
-
-    .section ul {
-      margin: 0;
-      padding-left: 20px;
-      font-size: 14.5px;
-      line-height: 1.75;
-      color: var(--text-color);
-    }
-
-    .highlight-box {
-      margin-bottom: 14px;
-      padding: 16px 18px;
-      border-radius: 10px;
-      border-left: 5px solid var(--sub-color);
-      background: #f0f7ff;
-      line-height: 1.5;
-    }
-
-    .highlight-box strong {
-      font-size: 15px;
-    }
-
-    .highlight-box a {
-      display: inline-block;
-      margin-top: 5px;
-      color: var(--sub-color);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .highlight-box a:hover {
-      text-decoration: underline;
-    }
-
-    .ai-box {
-      border-left-color: var(--green);
-      background: #f0fff4;
-    }
-
-    .ai-box a {
-      color: var(--green);
-    }
-
-    .calc-box {
-      border-left-color: var(--orange);
-      background: #fff8ed;
-    }
-
-    .calc-box a {
-      color: var(--orange);
-    }
-
-    .link-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 10px 16px;
-      border: 1px solid #d8dde3;
-      border-radius: 9px;
-      background: #fff;
-      color: #333;
-      font-size: 14px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn:hover {
-      border-color: var(--main-color);
-      color: var(--main-color);
-      background: #f0f4f8;
-      transform: translateY(-1px);
-    }
-
-    .btn:focus {
-      outline: 3px solid rgba(0, 86, 179, 0.25);
-      outline-offset: 2px;
-    }
-
-    .qr-box {
-      margin-top: 30px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border-color);
-      text-align: center;
-    }
-
-    .qr-img {
-      width: 130px;
-      height: 130px;
-      object-fit: contain;
-      margin-top: 6px;
-      padding: 8px;
-      border: 1px solid #d8dde3;
-      border-radius: 12px;
-      background: #fff;
-    }
-
-    .qr-text {
-      margin: 10px 0 0;
-      font-size: 13px;
-      line-height: 1.5;
-      color: var(--muted-color);
-    }
-
-    @media (max-width: 520px) {
-      body {
-        padding: 24px 14px;
-      }
-
-      .card {
-        padding: 30px 22px;
-      }
-
-      h1 {
-        font-size: 26px;
-      }
-
-      .profile-img {
-        width: 125px;
-        height: 125px;
-      }
-
-      .link-group {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .qr-img {
-        width: 120px;
-        height: 120px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
+    "inLanguage": "en",
+    "url": "https://lyw22384011.github.io/",
     "mainEntity": {
       "@type": "Person",
       "name": "Yuwei Liu",
@@ -283,14 +50,12 @@
       "knowsAbout": [
         "XAFS",
         "EXAFS",
-        "X-ray absorption spectroscopy",
-        "in-situ XAFS",
-        "operando XAFS",
-        "synchrotron radiation",
-        "beamline instrumentation",
-        "BL14B2",
-        "multimetallic nanoparticles",
-        "high-entropy alloy nanoparticles"
+        "synchrotron spectroscopy",
+        "data analysis",
+        "AI-assisted tools",
+        "materials chemistry",
+        "X-ray techniques",
+        "neutron techniques"
       ]
     }
   }
@@ -299,6 +64,14 @@
 
 <body>
   <main class="card">
+    <nav class="language-links" aria-label="Language versions">
+      <a href="https://lyw22384011.github.io/" class="active-lang">English</a>
+      <span>|</span>
+      <a href="https://lyw22384011.github.io/ja/">日本語</a>
+      <span>|</span>
+      <a href="https://lyw22384011.github.io/zh/">中文</a>
+    </nav>
+
     <img src="profile.jpg" alt="Portrait of Yuwei LIU" class="profile-img" />
 
     <h1>Yuwei LIU</h1>
@@ -315,17 +88,16 @@
       <h2 id="about" class="section-title">About</h2>
 
       <p>
-        Yuwei Liu is a tenure-track researcher at the Japan Synchrotron Radiation
-        Research Institute (JASRI), SPring-8. His work focuses on X-ray absorption
-        spectroscopy (XAFS), EXAFS analysis, in-situ XAFS instrumentation, and
-        synchrotron-based characterization of multimetallic nanoparticles.
+        Yuwei Liu is a tenure-track researcher at JASRI/SPring-8, currently
+        responsible for XAFS experiments at Beamline BL14B2. His work focuses on
+        user support, technical development, data analysis, and AI-assisted tools
+        for synchrotron experiments.
       </p>
 
       <p>
-        He is currently involved in user support and technical development at
-        Beamline BL14B2, SPring-8, including transmission XAFS, fluorescence XAFS,
-        sample absorption evaluation, beamline automation, and AI-assisted tools
-        for XAFS experiments.
+        With a background in materials chemistry, X-ray/neutron techniques, and
+        signal/data processing, he aims to integrate chemistry, physics, and
+        mathematics to help researchers create new scientific outcomes.
       </p>
     </section>
 
@@ -333,12 +105,10 @@
       <h2 id="research-interests" class="section-title">Research Interests</h2>
 
       <ul>
-        <li>X-ray absorption spectroscopy (XAFS) and EXAFS analysis</li>
-        <li>In-situ and operando XAFS measurements</li>
-        <li>Synchrotron radiation instrumentation and beamline automation</li>
-        <li>Fluorescence and transmission XAFS at BL14B2, SPring-8</li>
-        <li>Multimetallic and high-entropy alloy nanoparticles</li>
-        <li>AI-assisted tools for XAFS sample design and absorption evaluation</li>
+        <li>Data-driven analysis of synchrotron spectroscopy</li>
+        <li>Practical method development for synchrotron-based materials research</li>
+        <li>AI-assisted tools for measurement planning and research support</li>
+        <li>Interdisciplinary applications bridging chemistry, physics, and data science</li>
       </ul>
     </section>
 
@@ -411,7 +181,8 @@
       />
 
       <p class="qr-text">
-        Scan to open this homepage
+        Scan to open this homepage<br />
+        English / 日本語 / 中文
       </p>
     </section>
   </main>
