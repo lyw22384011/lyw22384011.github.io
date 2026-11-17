@@ -1,0 +1,32 @@
+---
+layout: blog
+permalink: /blog/
+title: Blog
+lang: en
+description: Occasional notes on research, technology, and other ideas.
+---
+<nav class="blog-nav" aria-label="Profile">
+  <a href="{{ '/' | relative_url }}">← Home</a>
+  <a href="{{ '/ja/' | relative_url }}" lang="ja">日本語ホーム</a>
+  <a href="{{ '/zh/' | relative_url }}" lang="zh-CN">中文主页</a>
+</nav>
+
+<h1>{{ page.title | escape }}</h1>
+<p class="blog-intro">{{ page.description | escape }}</p>
+
+{% if site.posts.size > 0 %}
+<ul class="blog-list">
+  {% for post in site.posts %}
+  <li lang="{{ post.lang | default: 'en' | escape }}">
+    <p class="blog-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      {% if post.language_label %}<span>{{ post.language_label | escape }}</span>{% endif %}
+    </p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+    <p class="blog-summary">{{ post.description | escape }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No posts yet.</p>
+{% endif %}
