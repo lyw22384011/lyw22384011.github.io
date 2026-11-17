@@ -266,3 +266,87 @@ h1 {
     height: 120px;
   }
 }
+
+.blog-box p {
+  margin: 0;
+}
+
+.blog-page {
+  text-align: left;
+}
+
+.blog-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.blog-nav a,
+.blog-list a,
+.blog-prose a {
+  color: var(--sub-color);
+  text-underline-offset: 0.2em;
+}
+
+.blog-intro,
+.blog-list p,
+.blog-prose {
+  line-height: 1.75;
+}
+
+.blog-intro {
+  margin: 8px 0 0;
+  color: var(--muted-color);
+}
+
+.blog-list {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+.blog-list li {
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.blog-list li:last-child {
+  padding-bottom: 0;
+}
+
+.blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin: 0;
+  color: var(--muted-color);
+  font-size: 13px;
+}
+
+.blog-list h2 {
+  margin: 6px 0;
+  font-size: 20px;
+}
+
+.blog-list .blog-summary {
+  margin: 0;
+}
+
+.blog-prose {
+  margin-top: 24px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+  overflow-wrap: anywhere;
+}
+
+.blog-prose img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-prose pre {
+  overflow-x: auto;
+}

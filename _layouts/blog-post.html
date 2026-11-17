@@ -1,0 +1,20 @@
+---
+layout: blog
+---
+<nav class="blog-nav" aria-label="{{ page.back_label | default: 'All posts' | escape }}">
+  <a href="{{ '/blog/' | relative_url }}">← {{ page.back_label | default: 'All posts' | escape }}</a>
+</nav>
+
+<article>
+  <header>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="blog-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.language_label %}<span>{{ page.language_label | escape }}</span>{% endif %}
+    </p>
+  </header>
+
+  <div class="blog-prose">
+    {{ content }}
+  </div>
+</article>
